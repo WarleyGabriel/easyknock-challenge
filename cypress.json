@@ -1,0 +1,11 @@
+{
+  "baseUrl": "https://www.easyknock.com",
+  "watchForFileChanges": false,
+  "video": false,
+  "viewportWidth": 1920,
+  "viewportHeight": 1080,
+  "ignoreTestFiles": [
+    "*.page.js"
+  ],
+  "reporter": "cypress-mochawesome-reporter"
+}
