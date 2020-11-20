@@ -15,6 +15,7 @@ This is an end-to-end tests project. These tests are written in JavaScript with 
 ## Features
 
 - Page Object Pattern
+- [Visual regression tests](https://github.com/meinaart/cypress-plugin-snapshots)
 - Github Actions
 - Report (mochawesome)
 
@@ -40,29 +41,48 @@ npm run cy:run
 ```
 
 ```bash
-  Running:  specs/LeaseBackCalculator.spec.js                                               (1 of 1)
+─────────────────────────────────────────────────────────────────────────────────────────────────
+Running:  specs/LeaseBackCalculator.spec.js                                               (1 of 2)
 
   Should calculate the estimated cash proceeds value
-    ✓ Calculates the estimated cash proceeds (Green calculator) (6419ms)
-    ✓ Calculates the estimated cash proceeds (White calculator) (4255ms)
+    ✓ Calculates the estimated cash proceeds (Green calculator) (5966ms)
+    ✓ Calculates the estimated cash proceeds (White calculator) (5148ms)
 
   2 passing (11s)
 
 [mochawesome] Report JSON saved to /easyknock-challenge/cypress/results/json/mochawesome.json
+  ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                             │
+  │ Passing:      2                                                                             │
+  │ Failing:      0                                                                             │
+  │ Pending:      0                                                                             │
+  │ Skipped:      0                                                                             │
+  │ Screenshots:  0                                                                             │
+  │ Video:        false                                                                         │
+  │ Duration:     11 seconds                                                                    │
+  │ Spec Ran:     specs/LeaseBackCalculator.spec.js                                             │
+  └─────────────────────────────────────────────────────────────────────────────────────────────┘
+─────────────────────────────────────────────────────────────────────────────────────────────────
+  Running:  specs/LeaseBackCalculatorVisualRegression.spec.js                            (2 of 2)
 
-  (Results)
+  Should show the calculator visually correct
+    ✓ Green calculator (4831ms)
+    ✓ White calculator (3908ms)
 
-  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
-  │ Tests:        2                                                                                │
-  │ Passing:      2                                                                                │
-  │ Failing:      0                                                                                │
-  │ Pending:      0                                                                                │
-  │ Skipped:      0                                                                                │
-  │ Screenshots:  0                                                                                │
-  │ Video:        false                                                                            │
-  │ Duration:     10 seconds                                                                       │
-  │ Spec Ran:     specs/LeaseBackCalculator.spec.js                                                │
-  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+  2 passing (9s)
+
+[mochawesome] Report JSON saved to /easyknock-challenge/cypress/results/json/mochawesome_001.json
+  ┌─────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                             │
+  │ Passing:      2                                                                             │
+  │ Failing:      0                                                                             │
+  │ Pending:      0                                                                             │
+  │ Skipped:      0                                                                             │
+  │ Screenshots:  2                                                                             │
+  │ Video:        false                                                                         │
+  │ Duration:     8 seconds                                                                     │
+  │ Spec Ran:     specs/LeaseBackCalculatorVisualRegression.spec.js                             │
+  └─────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
 Open Cypress and select what test do you want to run and what browser:

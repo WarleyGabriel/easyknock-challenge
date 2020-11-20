@@ -5,7 +5,13 @@
   "viewportWidth": 1920,
   "viewportHeight": 1080,
   "ignoreTestFiles": [
-    "*.page.js"
+    "*.page.js",
+    "**/__snapshots__/*",
+    "**/__image_snapshots__/*"
   ],
+  "retries": {
+    "runMode": 1,
+    "openMode": 0
+  },
   "reporter": "cypress-mochawesome-reporter"
 }

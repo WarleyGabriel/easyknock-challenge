@@ -35,6 +35,14 @@ class SellStayPage {
     return cy.xpath('//button[text()="Calculate"]');
   }
 
+  get containerGreenCalculator() {
+    return cy.xpath('//div[@class="calc-title"]/..');
+  }
+
+  get containerWhiteCalculator() {
+    return cy.xpath("(//section)[6]/div");
+  }
+
   get containerResultGreenCalculator() {
     return cy.get("div.calc-result");
   }

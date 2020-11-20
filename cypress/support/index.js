@@ -18,6 +18,8 @@ import "./commands";
 
 import "cypress-mochawesome-reporter/register";
 
+import "cypress-plugin-snapshots/commands";
+
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
