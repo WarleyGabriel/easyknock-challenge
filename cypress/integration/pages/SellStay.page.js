@@ -5,20 +5,6 @@ class SellStayPage {
     cy.visit("/programs/sellstay");
   }
 
-  setCookie(type) {
-    cy.setCookie("_vis_opt_exp_111_combi", type, { domain: ".easyknock.com" });
-  }
-
-  openGreenCalculator() {
-    this.setCookie("1");
-    this.open();
-  }
-
-  openWhiteCalculator() {
-    this.setCookie("3");
-    this.open();
-  }
-
   get inputHomeValue() {
     return cy.get('input[name="homeValue"]');
   }
@@ -28,27 +14,15 @@ class SellStayPage {
   }
 
   get inputOtherLiens() {
-    return cy.get('input[name="otherLiens"]');
+    return cy.get('input[name="liens"]');
   }
 
   get buttonCalculate() {
     return cy.xpath('//button[text()="Calculate"]');
   }
 
-  get containerGreenCalculator() {
-    return cy.xpath('//div[@class="calc-title"]/..');
-  }
-
   get containerWhiteCalculator() {
     return cy.xpath("(//section)[6]/div");
-  }
-
-  get containerResultGreenCalculator() {
-    return cy.get("div.calc-result");
-  }
-
-  get resultGreenCalculator() {
-    return cy.get("span.calc-result__amount");
   }
 
   get containerResultWhiteCalculator() {

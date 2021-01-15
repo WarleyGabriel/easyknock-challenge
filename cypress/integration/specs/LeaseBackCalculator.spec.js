@@ -3,25 +3,6 @@
 import { sellStayPage } from "../pages/SellStay.page";
 
 context("Should calculate the estimated cash proceeds value", () => {
-  it("Calculates the estimated cash proceeds (Green calculator)", () => {
-    const values = {
-      homeValue: 258900,
-      mortgageBalance: 120000,
-      otherLiens: 4000,
-    };
-
-    sellStayPage.openGreenCalculator();
-    sellStayPage.fillCalculator(values);
-
-    const expectedResult = sellStayPage.getEstimatedCashProceeds(values);
-
-    sellStayPage.containerResultGreenCalculator.should("be.visible");
-    sellStayPage.resultGreenCalculator.should(
-      "have.text",
-      `$${expectedResult}`
-    );
-  });
-
   it("Calculates the estimated cash proceeds (White calculator)", () => {
     const values = {
       homeValue: 258900,
@@ -29,7 +10,7 @@ context("Should calculate the estimated cash proceeds value", () => {
       otherLiens: 4000,
     };
 
-    sellStayPage.openWhiteCalculator();
+    sellStayPage.open();
     sellStayPage.fillCalculator(values);
 
     const expectedResult = sellStayPage.getEstimatedCashProceeds(values);
